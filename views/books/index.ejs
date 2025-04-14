@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book List</title>
+</head>
+<body>
+  <h1>All Books</h1>
+
+  <a href="/books/add">➕ Add new book</a>
+
+  <ul>
+    <% books.forEach(book => { %>
+      <li>
+        <strong><%= book.title %></strong> por <%= book.author %>
+        (<a href="/books/<%= book.id %>">see details</a>)
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/">🏠 Home</a>
+</body>
+</html>
